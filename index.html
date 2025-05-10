@@ -2,97 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Nousaic</title>
+  <title>Nousaic Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .split {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: row;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.left, .right {
-  flex: 1;
-  height: 100vh;
-  overflow: hidden;
-}
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #f0f0f0;
+      background: #0f0f0f;
+    }
 
-.left {
-  background: url('drones.jpg') center center / cover no-repeat;
-}
+    .container {
+      display: flex;
+      height: 100vh;
+    }
 
-.right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 2rem;
-  text-align: center;
-}
+    .left {
+      flex: 1;
+      background: url('drones.jpg') center center / cover no-repeat;
+    }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+    .right {
+      flex: 1;
+      background-color: #0f0f0f;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
 
-.tagline {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 2rem;
-  max-width: 600px;
-}
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
 
-.mission {
-  font-size: 1rem;
-  color: #aaa;
-  line-height: 1.6;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
+    .tagline {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
 
-.semantic-image {
-  max-width: 500px;
-  width: 90%;
-  border: 1px solid #222;
-  border-radius: 4px;
-  opacity: 0.95;
-}
+    .mission {
+      font-size: 1rem;
+      color: #aaa;
+      line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 3rem;
+    }
 
-.footer {
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #666;
-}
+    .semantic {
+      width: 80%;
+      max-width: 480px;
+      border-radius: 4px;
+      opacity: 0.95;
+    }
 
-@media (max-width: 768px) {
-  .split {
-    flex-direction: column;
-  }
-  .left {
-    height: 40vh;
-  }
-  .right {
-    padding: 2rem 1rem;
-    height: auto;
-  }
-}
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
 
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left {
+        height: 40vh;
+      }
+
+      .right {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+
+      .mission {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="split">
+  <div class="container">
     <div class="left"></div>
     <div class="right">
       <h1>Nousaic</h1>
-      <div class="tagline">Architecture for the future of autonomous coordination.</div>
+      <div class="tagline">Intelligent systems that coordinate through structure, not command.</div>
       <div class="mission">
         Nousaic Labs designs principled AI architectures for autonomous systems and agents.<br/>
         We focus on decentralized reasoning, verifiable coordination, and semantic alignment—<br/>
         enabling resilient behavior in uncertain, communication-limited environments.
       </div>
-      <img src="network.jpg" alt="Semantic coordination network" class="semantic-image"/>
+      <img src="network.jpg" alt="Semantic network visualization" class="semantic"/>
       <div class="footer">
-        <a href="mailto:contact@nousaic.ai" style="color:#888;">contact@nousaic.ai</a>
+        <a href="mailto:contact@nousaic.ai">contact@nousaic.ai</a>
       </div>
     </div>
   </div>
