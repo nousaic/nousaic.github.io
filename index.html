@@ -2,128 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nousaic Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-      color: #f0f0f0;
-      background: #0f0f0f;
-    }
-
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-
-    .left {
-      flex: 1;
-      background: url('drones.jpg') center center / cover no-repeat;
-    }
-
-    .right {
-      flex: 1;
-      background-color: #0f0f0f;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      letter-spacing: 0.5px;
-    }
-
-    .tagline {
-      font-size: 1.25rem;
-      color: #ccc;
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-    }
-
-    .mission {
-      font-size: 1rem;
-      color: #aaa;
-      line-height: 1.6;
-      max-width: 620px;
-      margin-bottom: 3rem;
-    }
-
-    .semantic {
-      width: 80%;
-      max-width: 480px;
-      border-radius: 4px;
-      opacity: 0.95;
-    }
-
-    .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    .footer a {
-      color: #888;
-      text-decoration: none;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .left {
-        height: 40vh;
-      }
-
-      .right {
-        height: auto;
-        padding: 2rem 1rem;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .tagline {
-        font-size: 1.1rem;
-      }
-
-      .mission {
-        font-size: 0.95rem;
-      }
-    }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body>
-  <div class="container">
-    <div class="left"></div>
-    <div class="right">
-      <h1>Nousaic</h1>
-      <div class="tagline">Intelligent systems that coordinate through structure, not command.</div>
-      <div class="mission">
-        Nousaic Labs designs principled AI architectures for autonomous systems and agents.<br/>
-        We focus on decentralized reasoning, verifiable coordination, and semantic alignment—<br/>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navigation Bar -->
+ <nav class="bg-gray-950 text-white px-6 py-4 flex justify-between items-center border-b border-gray-700">
+  <div class="text-xl font-semibold">Nousaic</div>
+  <ul class="flex space-x-6 text-gray-300 text-sm">
+    <li><a href="index.html" class="hover:text-white">Home</a></li>
+    <li><a href="about.html" class="hover:text-white">About</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center">
+    <div class="w-full md:w-1/2 p-10 md:p-20 space-y-6 z-10">
+        <img src="nousaic-logo.png" alt="Nousaic Logo" class="h-48 w-auto" />
+
+      <h2 class="text-2xl md:text-3xl text-gray-300 font-medium">
+        Empowering Decentralized Intelligence
+      </h2>
+      <p id="mission" class="text-lg text-gray-400 leading-relaxed max-w-xl">
+        Nousaic Labs designs principled AI architectures for autonomous systems and agents.
+        We focus on decentralized reasoning, verifiable coordination, and semantic alignment —
         enabling resilient behavior in uncertain, communication-limited environments.
-      </div>
-      <img src="network.jpg" alt="Semantic network visualization" class="semantic"/>
-      <div class="footer">
-        <a href="mailto:contact@nousaic.ai">contact@nousaic.ai</a>
-      </div>
+      </p>
     </div>
-  </div>
+
+    <div class="w-full md:w-1/2 relative h-[500px] md:h-screen overflow-hidden">
+      <img src="drones.jpg" alt="Drones" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+      <img src="network.jpg" alt="Semantic Network" class="absolute inset-0 w-full h-full object-cover mix-blend-screen opacity-70" />
+      <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 text-center bg-gray-900 border-t border-gray-800">
+    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+    <p class="text-gray-400">Email: contact@nousaic.ai</p>
+  </section>
+
 </body>
 </html>
