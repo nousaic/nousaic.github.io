@@ -5,74 +5,78 @@
   <title>Nousaic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-    }
     .split {
-      display: flex;
-      height: 100vh;
-      flex-direction: row;
-    }
-    .left, .right {
-      flex: 1;
-      height: 100%;
-    }
-    .left {
-      background: url('drones.jpg') center center / cover no-repeat;
-    }
-    .right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-    .mission {
-      font-size: 1rem;
-      color: #aaa;
-      line-height: 1.6;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-    .semantic-image {
-      max-width: 500px;
-      width: 90%;
-      border: 1px solid #222;
-      border-radius: 4px;
-      opacity: 0.95;
-    }
-    .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    @media (max-width: 768px) {
-      .split {
-        flex-direction: column;
-      }
-      .left {
-        height: 40vh;
-      }
-      .right {
-        height: auto;
-        padding: 2rem 1rem;
-      }
-    }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+}
+
+.left, .right {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.left {
+  background: url('drones.jpg') center center / cover no-repeat;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.mission {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.semantic-image {
+  max-width: 500px;
+  width: 90%;
+  border: 1px solid #222;
+  border-radius: 4px;
+  opacity: 0.95;
+}
+
+.footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+  }
+  .left {
+    height: 40vh;
+  }
+  .right {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
