@@ -2,52 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nousaic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: system-ui, sans-serif;
-      background: #0f0f0f;
+      background-color: #0f0f0f;
       color: #f0f0f0;
-      text-align: center;
     }
-    .hero {
-      background: url("drones.jpg") center/cover no-repeat;
+    .split {
+      display: flex;
       height: 100vh;
+      flex-direction: row;
+    }
+    .left, .right {
+      flex: 1;
+      height: 100%;
+    }
+    .left {
+      background: url('drones.jpg') center center / cover no-repeat;
+    }
+    .right {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 4rem;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
     }
     h1 {
       font-size: 3rem;
-      margin: 0;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
     }
-    p {
+    .tagline {
       font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
       max-width: 600px;
-      margin: 1rem auto;
-      line-height: 1.6;
     }
-    img.face {
-      max-width: 700px;
-      width: 90%;
-      margin: 4rem auto;
-    }
-    a {
+    .mission {
+      font-size: 1rem;
       color: #aaa;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    .semantic-image {
+      max-width: 500px;
+      width: 90%;
+      border: 1px solid #222;
+      border-radius: 4px;
+      opacity: 0.95;
+    }
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .split {
+        flex-direction: column;
+      }
+      .left {
+        height: 40vh;
+      }
+      .right {
+        height: auto;
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Nousaic</h1>
-    <p>Innovative AI solutions for autonomous systems and agents.</p>
+  <div class="split">
+    <div class="left"></div>
+    <div class="right">
+      <h1>Nousaic</h1>
+      <div class="tagline">Architecture for the future of autonomous coordination.</div>
+      <div class="mission">
+        Nousaic Labs designs principled AI architectures for autonomous systems and agents.<br/>
+        We focus on decentralized reasoning, verifiable coordination, and semantic alignment—<br/>
+        enabling resilient behavior in uncertain, communication-limited environments.
+      </div>
+      <img src="network.jpg" alt="Semantic coordination network" class="semantic-image"/>
+      <div class="footer">
+        <a href="mailto:contact@nousaic.ai" style="color:#888;">contact@nousaic.ai</a>
+      </div>
+    </div>
   </div>
-
-  <p>At Nousaic Labs, our mission is to revolutionize the field of decentralized intelligence. We aim to create autonomous agents that can adapt and reason in uncertain environments, paving the way for resilient AI systems.</p>
-  <img src="face.jpg" alt="Semantic Face" class="face" />
-  <p><a href="mailto:contact@nousaic.ai">contact@nousaic.ai</a></p>
 </body>
 </html>
