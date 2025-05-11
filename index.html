@@ -46,18 +46,21 @@
 
 
   <!-- Transparent nav -->
-  <nav class="absolute top-0 left-0 w-full px-10 md:px-20 py-6 flex justify-between items-center text-white z-50">
+  <!-- Responsive transparent nav -->
+<nav class="absolute top-0 left-0 w-full px-4 sm:px-10 md:px-20 py-4 sm:py-6 flex flex-col sm:flex-row sm:justify-between sm:items-center text-white z-50 gap-3 sm:gap-0">
 
-  <div class="text-xl font-semibold uppercase tracking-wider text-white" style="text-shadow: 0 0 1px rgba(0,0,0,0.6);">
-  Nousaic
-</div>
+  <div class="text-xl font-semibold uppercase tracking-wider text-white text-center sm:text-left"
+       style="text-shadow: 0 0 1px rgba(0,0,0,0.6);">
+    Nousaic
+  </div>
 
-  <ul class="flex space-x-8 text-gray-300 text-base">
+  <ul class="flex flex-col sm:flex-row sm:space-x-8 space-y-2 sm:space-y-0 text-gray-300 text-sm sm:text-base text-center sm:text-left">
     <li><a href="index.html" class="hover:text-white transition-colors duration-200">Home</a></li>
     <li><a href="about.html" class="hover:text-white transition-colors duration-200">About</a></li>
     <li><a href="research.html" class="hover:text-white transition-colors duration-200">Research</a></li>
   </ul>
 </nav>
+
 
 
   <!-- Hero section -->
